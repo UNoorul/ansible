@@ -3,5 +3,4 @@
   become: true
   tasks:
   - name: Remove User
-    user:
-    name=niranjan state=absent remove=yes force=yes
+    user: name=niranjan state=absent remove=yes force=yes
