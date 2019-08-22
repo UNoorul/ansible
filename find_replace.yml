@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+  - name: Replace example
+    replace:
+     path: /home/ubuntu/niranjan.txt
+     regexp: 'hello'
+     replace: "world"
