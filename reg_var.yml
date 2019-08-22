@@ -3,4 +3,7 @@
   - name: Ansible register variable basic example
     shell: "find *.txt"
     args:
-     chdir: "/home/Ansible"
+     chdir: "/home/ubuntu"
+    register: reg_output
+  - debug:
+     var: reg_output
