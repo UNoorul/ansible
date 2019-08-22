@@ -1,0 +1,3 @@
+ansible all -m ping    <<-- to check availablity of inventory files. 
+ansible all -m setup   <<-- to check the remote server configurations.
+
