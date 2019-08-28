@@ -4,23 +4,20 @@
   tasks:
     - name: install apache2
       apt: name=apache2 update_cache=yes state=latest
-      
     - name: Copy httpd configuration file
-      copy: src:/data/httpd.original dest=/etc/httpd/conf/htttpd.conf
-
-    - name: Copy index file 
-      copy: src:/data/index.html dest=/var/www/html
+      copy:
+        src: /home/ubuntu/ansible/apache2.org
+        dest: /etc/apache2/apache2.conf
+    - name: Copy index file
+      copy: src=/home/ubuntu/ansible/index.html dest=/var/www/html
       notify:
       - restart apache
-      
-    - name: start and enable httpd service 
-      service: name: httpd state:restarted enabled=yes      
-      
-    - name: enabled mod_rewrite
-      apache2_module: name=rewrite state=present
-      notify:
-        - restart apache2
-
+    - name: start and enable httpd service
+      service:
+        name: apache2
+        state: restarted
+        enabled: yes
   handlers:
     - name: restart apache2
       service: name=apache2 state=restarted
+...
