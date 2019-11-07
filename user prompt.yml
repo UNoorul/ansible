@@ -13,3 +13,16 @@
 
     - debug:
         msg: 'Logging in as {{ username }}'
+...
+
+
+- hosts: all
+  gather_facts: False
+  vars_prompt:
+    - name: "Version"
+      prompt: "Which version Do you want to install?"
+
+  tasks:
+    - name: Ansible prompt example.
+      debug:
+        msg: "{{ Version }}"
