@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: create group
+    group: name=dev state=present
+
+  - name: Create User
+    user: name=noor password=niranjan groups=dev shell=/bin/bash
