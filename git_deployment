@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: git pull 
+    git: repo='https://github.com/UNoorul/scripts' dest=/tmp/new update=no 
