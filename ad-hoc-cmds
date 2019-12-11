@@ -3,4 +3,5 @@ git pull https://github.com/UNoorul/ansible master
 
 ansible all -m ping    <<-- to check availablity of inventory files. 
 ansible all -m setup   <<-- to check the remote server configurations.
+ansible -m shell -a 'touch /tmp/magic.txt' webservers
 
