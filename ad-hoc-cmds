@@ -5,3 +5,10 @@ ansible all -m ping    <<-- to check availablity of inventory files.
 ansible all -m setup   <<-- to check the remote server configurations.
 ansible -m shell -a 'touch /tmp/magic.txt' webservers
 
+ansible webservers -b -m file -a 'path=/tmp/magic.txt owner=root group=root mode=0644'
+
+$ ansible webservers -m service -a 'name=nginx state=started enabled=yes' --become
+$ ansible webservers -m service -a 'name=nginx state=restarted' --become
+$ ansible webservers -m service -a 'name=nginx state=stopped' --become
+
+
