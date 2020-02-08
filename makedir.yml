@@ -3,4 +3,9 @@
   become: true
   tasks:
   - name: Create directory
-    file: path=/home/ubuntu/statebank state=directory mode=775 owner=ubuntu group=ubuntu
+    file:
+      path: /home/ubuntu/statebank
+      state: directory
+      owner: ubuntu
+      group: ubuntu
+      mode: '0775'    
