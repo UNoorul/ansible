@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'sample text1'
         sleep 2
+        git(url: 'https://github.com/UNoorul/ansible', branch: 'master')
       }
     }
 
