@@ -1,4 +1,4 @@
-https://forms.gle/HTnWVijakLEeqEua6
+https://docs.google.com/document/d/1YcxforJO4sdqxwj7badak4SZidiPWM4vf0YY6m2btqs/edit?usp=sharing
 
 # ansible
 Ansible examples 
