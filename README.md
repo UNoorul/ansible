@@ -1,4 +1,4 @@
-https://docs.google.com/document/d/1YcxforJO4sdqxwj7badak4SZidiPWM4vf0YY6m2btqs/edit?usp=sharing
+https://forms.gle/5cuJ7DE2KFk3rRfT9
 
 # ansible
 Ansible examples 
